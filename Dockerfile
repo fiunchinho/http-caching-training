@@ -1,0 +1,4 @@
+FROM newsdev/varnish:4.1.0
+
+ENV VARNISH_PORT 8080
+EXPOSE 8080

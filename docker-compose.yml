@@ -1,0 +1,25 @@
+version: '2'
+
+networks:
+  local:
+    driver: bridge
+
+services:
+  varnish:
+    build: .
+    image: mpwar/varnish
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./default.vcl:/etc/varnish/default.vcl"
+    networks:
+      - local
+
+  app:
+    image: tutum/apache-php
+    ports:
+      - "8081:80"
+    volumes:
+      - ".:/app"
+    networks:
+      - local
