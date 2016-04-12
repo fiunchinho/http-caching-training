@@ -1,9 +1,0 @@
-version: '2'
-
-services:
-  app:
-    image: tutum/apache-php
-    ports:
-      - "8081:80"
-    volumes:
-      - ".:/app"
