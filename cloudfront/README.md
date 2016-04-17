@@ -40,3 +40,5 @@ You can set an object as invalid, so next request to that object will make Cloud
 ## Exercise
 Create a CloudFront distribution that has a new EC2 instance as **Origin**. Deploy the files in this repository following the steps in the `README` file.
 Now, update the `index.php` file so instead of loading the image from the local path, it uses your CloudFront distribution.
+
+Don't forget that since Cloudfront instances are all over the world, the security group of your instances must allow incoming traffic from everywhere.
