@@ -22,3 +22,8 @@ Check `etag.php` example.
 
 ### Last-Modified
 Check `modified.php` example.
+
+## Sources
+- [Things Caches Do](http://2ndscale.com/rtomayko/2008/things-caches-do)
+- [HTTP Cache](https://symfony.com/doc/current/book/http_cache.html)
+- [Caching Tutorial](https://www.mnot.net/cache_docs/)
