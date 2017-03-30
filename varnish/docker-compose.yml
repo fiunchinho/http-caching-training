@@ -9,17 +9,17 @@ services:
     build: .
     image: mpwar/varnish
     ports:
-      - "8080:8080"
+      - "8001:8080"
     volumes:
       - "./default.vcl:/etc/varnish/default.vcl"
     networks:
       - local
 
   app:
-    image: tutum/apache-php
+    image: php:7.1-apache
     ports:
-      - "8081:80"
+      - "8000:80"
     volumes:
-      - ".:/app"
+      - ".:/var/www/html"
     networks:
       - local

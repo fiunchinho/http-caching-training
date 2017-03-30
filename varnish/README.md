@@ -114,10 +114,10 @@ sub vcl_deliver {
     # Add real client ip to a header
     set resp.http.X-Forwarded-For = client.ip;
 
-    if (req.http.User-Agent ~ "(?i)mobile" {
-        set req.http.X-Device = "mobile";
+    if (req.http.User-Agent ~ "(?i)mobile") {
+        set resp.http.X-Device = "mobile";
     }else{
-        set req.http.X-Device = "desktop";
+        set resp.http.X-Device = "desktop";
     }
 
     # Remove some headers: Apache version & OS
